@@ -95,7 +95,7 @@ def admin():
 def updatecurr1(res):
     try:
         print("****************************")
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
         #i=random.randint(101,10001)
         print("hello---------------------------")
@@ -110,7 +110,7 @@ def updatecurr1(res):
 def updatecurr2(res):
     try:
         print("****************************")
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
         #i=random.randint(101,10001)
         print("hello---------------------------")
@@ -124,7 +124,7 @@ def updatecurr2(res):
 
 def getOrder0status():
     try:
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
         #select * from orders where order_date between adddate(now(),-12) and now();
         d.execute("""select * from orders where order_status=0 and order_date between adddate(now(),-7) and now() """)
@@ -139,7 +139,7 @@ def getOrder0status():
 
 def getOrder1status():
     try:
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
         #select * from orders where order_date between adddate(now(),-12) and now();
         d.execute("""select * from orders where order_status=1 and order_delivery_status=0 and order_date between adddate(now(),-7) and now() """)
@@ -154,7 +154,7 @@ def getOrder1status():
 
 def getOrderService():
     try:
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
         #select * from orders where order_date between adddate(now(),-12) and now();
         d.execute("""select s.service_id,s.order_id,s.vendor_id,s.date_of_delivery,o.order_delivery_status from service as s,orders as o where o.order_status=1 and o.order_id=s.order_id and o.order_date between adddate(now(),-7) and now() """)
@@ -169,7 +169,7 @@ def getOrderService():
 
 def getEmps():
     try:
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
         #select * from orders where order_date between adddate(now(),-12) and now();
         d.execute("""select * from employee """)
@@ -184,7 +184,7 @@ def getEmps():
 
 def getVehicles():
     try:
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
         #select * from orders where order_date between adddate(now(),-12) and now();
         d.execute("""select * from vehicle """)
@@ -199,7 +199,7 @@ def getVehicles():
 
 def getsan():
     try:
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
         #select * from orders where order_date between adddate(now(),-12) and now();
         d.execute("""select * from sanitary_item """)
@@ -213,7 +213,7 @@ def getsan():
         return False
 def getbul():
     try:
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
         #select * from orders where order_date between adddate(now(),-12) and now();
         d.execute("""select * from building_material """)
@@ -229,7 +229,7 @@ def getbul():
 def service_allotment(res):
     try:
         print(res)
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
         print(res)
         for keys in res:
@@ -279,7 +279,7 @@ def admin_login():
 def add_employee(res):
     try:
         print(res)
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
 
         i=random.randint(1,10000)
@@ -297,7 +297,7 @@ def add_employee(res):
 def add_vehicle(res):
     try:
         print(res)
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
         i=random.randint(5000,6000)
         d.execute("""insert into vehicle(vehicle_id,registration_no,numberPlateInfo,curr_avail) values({},'{}','{}',{})""".format(i,res['regno'],res['npi'],1))
@@ -311,7 +311,7 @@ def add_vehicle(res):
 def add_sanitaryItem(res):
     try:
         print("****************************")
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
         i=random.randint(101,10001)
         print("hello---------------------------")
@@ -326,7 +326,7 @@ def add_sanitaryItem(res):
 def add_building_material(res):
     try:
         print("****************************")
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
         i=random.randint(101,10001)
         print("hello---------------------------")
@@ -341,7 +341,7 @@ def add_building_material(res):
 def editItem1(res):
     try:
         print("****************************")
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
         #i=random.randint(101,10001)
         print("hello---------------------------")
@@ -356,7 +356,7 @@ def editItem1(res):
 def deleteItem1(res):
     try:
         print("****************************")
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
         #i=random.randint(101,10001)
         print("hello---------------------------")
@@ -371,7 +371,7 @@ def deleteItem1(res):
 def editItem2(res):
     try:
         print("****************************")
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
         print res
         #i=random.randint(101,10001)
@@ -387,7 +387,7 @@ def editItem2(res):
 def deleteItem2(res):
     try:
         print("****************************")
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
         #i=random.randint(101,10001)
         print("hello---------------------------")
@@ -402,7 +402,7 @@ def deleteItem2(res):
 def add_sdealer(res):
     try:
         print("****************************")
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
         i=random.randint(101,10001)
         print("hello---------------------------")
@@ -417,7 +417,7 @@ def add_sdealer(res):
 def add_bdealer(res):
     try:
         print("****************************")
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
         i=random.randint(101,10001)
         print("hello---------------------------")
@@ -523,7 +523,7 @@ def updatecust(res):
     try:
         print("****************************")
         print(res)
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
         #i=random.randint(101,10001)
         print("hello---------------------------")
@@ -578,7 +578,7 @@ def calfunction(res):
     try:
         print(res)
         print("ererere")
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
         print("345345")
 
@@ -636,7 +636,7 @@ def payment():
 
 def getcustID(res,mail):
     try:
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
 
 
@@ -659,7 +659,7 @@ def insertintoorder(res,custID):
     try:
         print(res)
         print("ererere")
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         print("qqqqq")
         d=c.cursor()
         print("222222")
@@ -754,7 +754,7 @@ def profile():
 def getCustDetail(res):
     try:
         print("ererere")
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         print("ddddddd")
         d=c.cursor()
         d.execute("""select * from customer where email='{}' """.format(res['email1']))
@@ -785,7 +785,7 @@ def profile_his():
 def getOrders(k):
     try:
         print("ererere")
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         print("ddddddd")
         d=c.cursor()
         d.execute("""select * from orders where customer_id={} """.format(k))
@@ -823,7 +823,7 @@ def sanitary_order():
 
 def func1():
     try:
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
         d.execute("""select item_id,item_name,cost,current_stock,threshold from sanitary_item """)
         results = d.fetchall()
@@ -838,7 +838,7 @@ def func1():
 def func2():
     try:
         print("ererere")
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         print("ddddddd")
         d=c.cursor()
         d.execute("""select email from customer """)
@@ -864,7 +864,7 @@ def building_order():
 
 def func3():
     try:
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         d=c.cursor()
         d.execute("""select item_id,item_name,cost,current_stock,threshold from building_material """)
         results = d.fetchall()
@@ -879,7 +879,7 @@ def func3():
 def func4():
     try:
         print("ererere")
-        c=connect("127.0.0.1","root","root","project")
+        c=connect("dg97.mysql.pythonanywhere-services.com","dg97","github!1!1","dg97$project")
         print("ddddddd")
         d=c.cursor()
         d.execute("""select email from customer """)
