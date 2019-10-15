@@ -11,6 +11,7 @@ from email.mime.text import MIMEText
 
 app = Flask(__name__)
 
+#Flask App
 lis=[]
 pls1=[]
 pls2=[]
